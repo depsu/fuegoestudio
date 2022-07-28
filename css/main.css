@@ -81,6 +81,14 @@ h2 {
 
 }
 
+@media (max-width:550px) {
+    h4 {
+        padding: 0 10px;
+    }
+    
+}
+
+
 .titulo {
     
 
@@ -253,5 +261,21 @@ footer .contenedor-telefono {
 
 }
 
+/*boton whatapp*/
+.whatsapp-icon {
+    margin-top: 14px;
+}
 
-
+.whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+}
