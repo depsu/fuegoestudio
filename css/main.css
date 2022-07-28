@@ -67,19 +67,26 @@ h1 {
     font-weight: 800;
     font-size: 65px;
     line-height: 76px;
-    color: #7206B7;
-
+    color: white;
+    text-align: center;
 
 }
 
 h2 {
     font-weight: 500;
-    font-size: 32px;
-    line-height: 20px;
-    color: #000000;
+    font-size: 38px;
+    line-height: 55px;
+    color: white;
+    text-align: center;
 
 
 }
+
+h4 {
+    text-align: center;
+    max-width: 745px;
+}
+
 
 @media (max-width:550px) {
     h4 {
@@ -142,7 +149,6 @@ section {
 /*automatizar clases */
 
 .centrar {
-    display: flex;
     margin: 0 auto;
 }
 
@@ -216,6 +222,9 @@ section {
 
 
 /*footer*/
+.contendor-imagen-informacion{
+    display: flex;
+}
 footer .redes-sociales {
 
     background-color: #161616;
