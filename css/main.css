@@ -22,7 +22,11 @@ a:hover {
 
 
 
-
+.banner img{
+    max-height: 666px;
+    object-fit: cover;
+    
+}
 
 .buttom-primary {
     width: 153px;
