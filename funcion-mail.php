@@ -13,7 +13,7 @@ if( ! isset( $_POST['nombre'] ) ){
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $email = $_POST['email'];
-$asunto = $_POST['asunto'];
+// $asunto = $_POST['asunto'];
 $mensaje = $_POST['mensaje'];
 
 if( empty(trim($nombre)) ) $nombre = 'anonimo';

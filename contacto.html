@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +23,9 @@
     <!--estilos pagina home css-->
     <link rel="stylesheet" href="/css/home.css">
 </head>
+
 <body>
- 
+
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: rgb(10, 10, 10) !important;">
         <div class="container">
@@ -47,7 +49,7 @@
                         <a class="nav-link " href="/ficha-tecnica">Ficha Técnica</a>
                     </li>
                     <li class="nav-item nav--reservaTuHora">
-                        <a class="nav-link " href="/reserva">Reserva tu hora</a>
+                        <a class="nav-link " href="/contacto">Reserva tu hora</a>
                     </li>
                 </ul>
             </div>
@@ -59,22 +61,22 @@
     <main class="container">
         <form method="post" action="phpmailer.php" enctype="multipart/form-data">
             <h2>Datos del mensaje</h2>
-           <div class="row">
-             <div class="col-sm-12 col-lg-6">
-                 <span>Tu nombre</span>
-                 <input type="text" name="nombre" autocapitalize="words" autocomplete="off" />
-             </div>
-             <div class="col-sm-12 col-lg-6">
-                 <span>Tu apellido</span>
-                 <input type="text" name="apellido" autocapitalize="words" autocomplete="off" />
-             </div>
-           </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                    <span>Tu nombre</span>
+                    <input type="text" name="nombre" autocapitalize="words" autocomplete="off" value="" required/>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <span>Tu apellido</span>
+                    <input type="text" name="apellido" autocapitalize="words" autocomplete="off" />
+                </div>
+            </div>
 
             <div>
                 <span>Tu email</span>
-                <input type="email" class="form-control" name="email" autocomplete="off" />
+                <input type="email" name="email" autocomplete="off" />
             </div>
-            <div>
+            <!-- <div>
                 <span>Asunto del mensaje</span>
                 <select name="asunto">
                     <option>Comentario</option>
@@ -82,7 +84,7 @@
                     <option>Reclamo</option>
                     <option>Suscripcion al twitch, asi sigue subiendo la barrita verde =)</option>
                 </select>
-            </div>
+            </div> -->
             <!-- <div class='large'>
                 <span>Adjunta una foto (de ser necesario)</span>
                 <input type="file" name="foto" accept="image/*" />
@@ -93,64 +95,64 @@
                 </textarea>
             </div>
             <div class='large'>
-                <button class='button' type="submit">Enviar mensaje</button>
+                <button class='button' value="Enviar" type="submit">Enviar mensaje</button>
             </div>
         </form>
     </main>
 
 
-        <!--Footer-->
-        <footer>
-            <div class="redes-sociales">
-                <div class="contenedor-imagenes">
-                    <div>
-                        <img src="/imagenes/footer-facebook.png" alt="facebook">
-                    </div>
-                    <div>
-                        <img src="/imagenes/footer-instagram.png" alt="instagram">
-                    </div>
+    <!--Footer-->
+    <footer>
+        <div class="redes-sociales">
+            <div class="contenedor-imagenes">
+                <div>
+                    <img src="/imagenes/footer-facebook.png" alt="facebook">
+                </div>
+                <div>
+                    <img src="/imagenes/footer-instagram.png" alt="instagram">
                 </div>
             </div>
-            <div class="informacion">
-                <div class="imagen-y-horario container">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-8 col-sm-12 imagen-informacion">
-                            <div class="contendor-imagen-informacion">
-                                <img class="centrar mw-100" src="/imagenes/footer-logo.png" alt="logo">
-                            </div>
+        </div>
+        <div class="informacion">
+            <div class="imagen-y-horario container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-8 col-sm-12 imagen-informacion">
+                        <div class="contendor-imagen-informacion">
+                            <img class="centrar mw-100" src="/imagenes/footer-logo.png" alt="logo">
                         </div>
-                        <div class="col-lg-4 col-sm-12 horario ">
-    
-                            <p class="contenedor-texto-llamada">
-                                <span style="display: inline-block;
+                    </div>
+                    <div class="col-lg-4 col-sm-12 horario ">
+
+                        <p class="contenedor-texto-llamada">
+                            <span style="display: inline-block;
                                 font-weight: 700;
                                 padding-bottom: 7px;">
-                                    Horario de Atención
-                                </span><br>
-                                Lunes a Viernes: 9:00 a 20:00 hrs. <br>
-                                sábado: 9:00 a 18:00 hrs.<br>
-                                Domingo: cerrado
-                            </p>
-    
-                            <div class="contenedor-telefono">
-                                <img src="/imagenes/footer-llamada.png" alt="llamada">
-                                <span class="telefono">
-                                    +569 85002654<br>
-                                </span>
-                            </div>
-                            <a href="https://goo.gl/maps/qJ4vGxm9uB54rGyT8"><img src="/imagenes/footer-ubicacion.png"
-                                    alt="llamada">
-                                <span class="telefono">Av. Libertador Bernardo O'Higgins 2118, Santiago</span></a>
+                                Horario de Atención
+                            </span><br>
+                            Lunes a Viernes: 9:00 a 20:00 hrs. <br>
+                            sábado: 9:00 a 18:00 hrs.<br>
+                            Domingo: cerrado
+                        </p>
+
+                        <div class="contenedor-telefono">
+                            <img src="/imagenes/footer-llamada.png" alt="llamada">
+                            <span class="telefono">
+                                +569 85002654<br>
+                            </span>
                         </div>
+                        <a href="https://goo.gl/maps/qJ4vGxm9uB54rGyT8"><img src="/imagenes/footer-ubicacion.png"
+                                alt="llamada">
+                            <span class="telefono">Av. Libertador Bernardo O'Higgins 2118, Santiago</span></a>
                     </div>
                 </div>
             </div>
-        </footer>
-    
-        <!--Botón whatsapp-->
-        <a href="https://api.whatsapp.com/send?phone=56985002654" class="whatsapp" target="_blank"> <i
-                class="fab fa-whatsapp whatsapp-icon"></i></a>
-    
+        </div>
+    </footer>
+
+    <!--Botón whatsapp-->
+    <a href="https://api.whatsapp.com/send?phone=56985002654" class="whatsapp" target="_blank"> <i
+            class="fab fa-whatsapp whatsapp-icon"></i></a>
+
 
 
     <!--Script home-->
@@ -164,4 +166,5 @@
 
 
 </body>
+
 </html>
