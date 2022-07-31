@@ -33,7 +33,7 @@ $headers = "MIME-Version: 1.0 \r\n";
 $headers.= "Content-type: text/html; charset=utf-8 \r\n";
 $headers.= "From: $nombre $apellido <$email> \r\n";
 $headers.= "To: Sitio web <contacto@fuegoestudio.cl> \r\n";
-// $headers.= "Cc: copia@email.com \r\n";
+ $headers.= "Cc: rivera.ale98@gmail.com \r\n";
 // $headers.= "Bcc: copia-oculta@email.com \r\n";
 
 
