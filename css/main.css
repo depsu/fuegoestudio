@@ -49,19 +49,21 @@ a:hover {
 input,
 select {
     height: 42px;
+    
 }
 
 textarea {
-    height: 268px;
+    height: 208px;
 }
 
 input,
 select,
 textarea {
+    width: 100%;
     padding-left: 1em;
     border: 0px;
 
-    background: #FFFFFF;
+    background: #403f3f;
     box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -129,12 +131,15 @@ h4 {
 }
 
 label {
+    margin-top: 10px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
 
     color: #000000;
 }
+
+
 
 
 /*padding de secciones */
