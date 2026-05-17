@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo armamos el sistema de reservas online de Fuego Estudio | Fuego Estudio</title>
+    <meta name="description" content="Por qué los músicos chilenos pasan de DM en Instagram a sitio con reservas online. Cómo digitalizamos las sesiones, pago de seña y comunicación previa en Fuego Estudio.">
+    <link rel="canonical" href="https://fuegoestudio.cl/blog/sistema-reservas-online-estudio-grabacion">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cómo armamos el sistema de reservas online de Fuego Estudio">
+    <meta property="og:description" content="De DM en Instagram a sistema profesional de reservas online con seña, comunicación previa y ficha técnica.">
+    <meta property="og:url" content="https://fuegoestudio.cl/blog/sistema-reservas-online-estudio-grabacion">
+    <meta property="og:image" content="https://fuegoestudio.cl/imagenes/bannerxd-pequeno2.jpg">
+    <meta property="og:site_name" content="Fuego Estudio">
+    <meta property="og:locale" content="es_CL">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="shortcut icon" href="/imagenes/icono-pagina.png" />
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/global/classtocss_apply.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script defer src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+    <style>
+        body { background: #0a0a0a; color: #e8e8e8; }
+        .post-container { max-width: 800px; margin: 0 auto; padding: 60px 25px; }
+        .post-hero { background: linear-gradient(rgba(10,10,10,.7), rgba(10,10,10,.85)), url('/imagenes/bannerxd-pequeno2.jpg'); background-size: cover; background-position: center; padding: 100px 25px 70px; text-align: center; color: white; margin-bottom: 0; }
+        .post-hero .kicker { color: #ff6a3d; letter-spacing: 3px; font-size: .75rem; text-transform: uppercase; font-weight: 700; }
+        .post-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 1rem auto; max-width: 800px; color: white; font-weight: 700; line-height: 1.2; }
+        .post-hero .meta { color: #aaa; font-size: .9rem; }
+        .post-container h2 { color: #ff6a3d; font-size: 1.6rem; margin: 2rem 0 1rem; font-weight: 700; }
+        .post-container h3 { color: #fff; font-size: 1.25rem; margin: 1.5rem 0 .75rem; font-weight: 600; }
+        .post-container p { color: #cfcfcf; line-height: 1.75; margin-bottom: 1.1rem; }
+        .post-container ul, .post-container ol { padding-left: 1.5rem; margin: 1rem 0 1.5rem; color: #cfcfcf; }
+        .post-container li { margin-bottom: 0.5rem; line-height: 1.65; }
+        .post-container a { color: #ff8a5b; text-decoration: underline; font-weight: 600; }
+        .post-container a:hover { color: #ffb190; }
+        .post-container strong { color: #fff; }
+        .post-container .lead { font-size: 1.15rem; color: #f0f0f0; border-left: 3px solid #ff6a3d; padding-left: 22px; font-style: italic; margin: 0 0 35px; }
+        .post-container table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: .92rem; }
+        .post-container th, .post-container td { border: 1px solid #2a2a2a; padding: .7rem; text-align: left; color: #cfcfcf; }
+        .post-container th { background: #1a1a1a; color: #ff8a5b; }
+        .cta-post { background: linear-gradient(135deg, #ff6a3d 0%, #c14225 100%); color: white; padding: 40px 30px; border-radius: 12px; text-align: center; margin: 50px 0 30px; }
+        .cta-post h3 { color: white; }
+        .cta-post .btn-post { background: white; color: #c14225 !important; padding: 12px 28px; border-radius: 30px; font-weight: 700; display: inline-block; margin-top: 16px; text-decoration: none; }
+        .related-post { background: #161616; padding: 30px; border-radius: 12px; margin-top: 40px; }
+        .related-post h3 { color: #ff8a5b; margin-bottom: 15px; }
+        .related-post a { color: #fff; }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background: rgb(10, 10, 10) !important;">
+        <div class="container">
+            <a class="navbar-brand" href="/"><img class="logo-nav" src="/imagenes/2.jpg" alt="fuego estudio"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ficha-tecnica">Ficha Técnica</a></li>
+                    <li class="nav-item nav--reservaTuHora"><a class="nav-link" href="/contacto">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="post-hero">
+        <p class="kicker">Detrás del estudio · Operación</p>
+        <h1>Cómo armamos el sistema de reservas online de Fuego Estudio (y por qué los músicos lo agradecieron)</h1>
+        <p class="meta">Mayo 2026 · 6 min de lectura · Equipo Fuego Estudio</p>
+    </header>
+
+    <div class="post-container">
+        <p class="lead">Hasta el año pasado, agendar una sesión en el estudio era un ping-pong de mensajes por Instagram durante 2-3 días. El músico preguntaba precio, nosotros respondíamos, él consultaba con la banda, nosotros volvíamos a ofrecer horario. Hoy un guitarrista bloquea sus 4 horas de grabación desde el celular en 90 segundos. Te contamos cómo y por qué.</p>
+
+        <h2>El problema: agendamiento por DM no escala</h2>
+        <p>Un estudio musical en Santiago tiene una variable que no se ve: el costo de una hora vacía no es cero. Es la luz, la calefacción del live room, el equipo encendido. Cada hora sin sesión es plata que se va. Y nuestro flujo de agenda dependía 100% de los DM de Instagram.</p>
+        <p>Los problemas concretos eran:</p>
+        <ul>
+            <li><strong>Mensajes que se pierden:</strong> entre comentarios de fans, etiquetas y mensajes de spam, las consultas de potenciales clientes se enterraban.</li>
+            <li><strong>Demora en responder:</strong> a veces tardábamos 18 horas. Muchos músicos terminaban yendo a otro estudio.</li>
+            <li><strong>Falta de seña:</strong> agendar sin pago anticipado significaba un 25% de no-show. Hora muerta, costo fijo igual.</li>
+            <li><strong>Cero información previa de la sesión:</strong> el ingeniero llegaba sin saber el género, la instrumentación, ni qué micrófonos preparar.</li>
+        </ul>
+
+        <h2>El sistema que armamos</h2>
+
+        <h3>1. Sitio con calendario de disponibilidad real</h3>
+        <p>El músico entra al sitio, elige tipo de sesión (grabación, mezcla, masterización), ve el calendario actualizado en tiempo real y elige bloque. Nada de "déjanos saber tu disponibilidad y te respondemos". Disponibilidad real, ahí, ahora.</p>
+
+        <h3>2. Formulario con ficha técnica obligatoria</h3>
+        <p>Antes de confirmar, el músico llena un formulario corto: género, instrumentación, cantidad de músicos, si necesita backline, formato de entrega (WAV, stems, mezcla). Esa ficha le llega al ingeniero antes de la sesión.</p>
+
+        <h3>3. Seña automática por Webpay</h3>
+        <p>El bloqueo se hace efectivo solo con el 30% de seña pagada. Si no paga, el horario queda libre. El no-show bajó de 25% a 4%.</p>
+
+        <h3>4. Recordatorio automático 24 horas antes</h3>
+        <p>WhatsApp Business envía recordatorio con dirección, instrucciones de estacionamiento, ficha técnica final y nombre del ingeniero a cargo. El día de la sesión, el músico ya sabe todo.</p>
+
+        <h3>5. Encuesta post-sesión</h3>
+        <p>48 horas después automáticamente llega encuesta corta de 3 preguntas. Mediante eso medimos NPS y detectamos cosas que se nos escapan en caliente.</p>
+
+        <h2>El equipo técnico detrás</h2>
+        <p>No construimos el sistema solos. La integración entre web, Google Calendar, Webpay y WhatsApp Business la armó <a href="https://paginasfast.cl/servicios/desarrollo-web/" rel="noopener">PaginasFast</a>, una <a href="https://paginasfast.cl" rel="noopener">agencia digital chilena</a> que entiende PYMEs creativas. Lo importante para nosotros fue que el sitio quedara con la estética del estudio (oscuro, análogo, con texturas) y no con el típico look de "página corporativa". Para chatbot y agendamiento usamos también el motor de <a href="https://www.automatizaweb.cl/blog/atencion-24-7-agendamiento-automatico-pyme" rel="noopener">AutomatizaWeb</a>, que es socio técnico de PaginasFast en este tipo de implementaciones.</p>
+
+        <h2>Resultados después de 10 meses</h2>
+        <div style="overflow-x:auto">
+        <table>
+            <thead><tr><th>Métrica</th><th>Antes</th><th>Hoy</th></tr></thead>
+            <tbody>
+                <tr><td>Tiempo promedio agendamiento</td><td>~36 horas</td><td>~90 segundos</td></tr>
+                <tr><td>Tasa no-show</td><td>~25%</td><td>~4%</td></tr>
+                <tr><td>Reservas mensuales</td><td>~28</td><td>~52</td></tr>
+                <tr><td>Ocupación promedio del estudio</td><td>~48%</td><td>~74%</td></tr>
+                <tr><td>NPS post-sesión</td><td>(no medíamos)</td><td>8.7 / 10</td></tr>
+            </tbody>
+        </table>
+        </div>
+
+        <h2>Lo que no esperábamos</h2>
+        <ul>
+            <li><strong>Más bandas nuevas:</strong> el sitio funciona como tarjeta de presentación. Bandas que no nos conocían llegan por Google buscando "estudio de grabación Santiago" y reservan sin haber escrito un solo mensaje.</li>
+            <li><strong>Ingenieros más preparados:</strong> la ficha técnica previa hace que el primer minuto de sesión sea productivo, no de configuración.</li>
+            <li><strong>Comunicación más profesional:</strong> el recordatorio automático le da al músico la sensación de "esto es serio". Es marketing emocional gratuito.</li>
+            <li><strong>Menos horas muertas:</strong> el calendario online permite agendar bloques cortos (2 horas para masterización rápida) que antes no aceptábamos porque no valía la pena coordinar.</li>
+        </ul>
+
+        <h2>Lo que NO funcionó</h2>
+        <ul>
+            <li><strong>Cotizador automático completo:</strong> probamos que el sitio calcule el precio según horas, género e ingeniero. Es demasiado variable. Volvimos a tarifas claras por tipo de servicio.</li>
+            <li><strong>Streaming de la sesión:</strong> ofrecimos al cliente ver la sesión por cámara desde casa. Casi nadie quiso. Lo sacamos.</li>
+            <li><strong>Reserva 100% sin contacto humano:</strong> intentamos que todo fuera automático. Algunos músicos (sobre todo bandas grandes) quieren conversar con humano antes. Mantuvimos opción de "agendar llamada antes de confirmar".</li>
+        </ul>
+
+        <h2>Recomendaciones para otros estudios</h2>
+        <ol>
+            <li>Si tu estudio depende del DM de Instagram, te estás perdiendo el 40-60% de los leads de Google.</li>
+            <li>La seña automática es la pieza con mayor ROI. Reduce el no-show drásticamente.</li>
+            <li>Pide ficha técnica previa SIEMPRE. La sesión rinde el doble.</li>
+            <li>El sitio del estudio no es para "verse bonito". Es operación: agenda, pago, comunicación.</li>
+            <li>Mide NPS desde el día 1. El feedback en frío te dice cosas que el feedback en caliente esconde.</li>
+        </ol>
+
+        <div class="cta-post">
+            <h3>¿Querés grabar en Fuego Estudio?</h3>
+            <p>Reservá desde el sitio: agenda en tiempo real, seña por Webpay y ficha técnica antes de tu sesión.</p>
+            <a href="/contacto" class="btn-post">Agendar sesión →</a>
+        </div>
+
+        <div class="related-post">
+            <h3>Sigue leyendo</h3>
+            <ul style="list-style:none;padding:0;">
+                <li style="margin-bottom:10px;">→ <a href="/servicios">Nuestros servicios de grabación y mezcla</a></li>
+                <li style="margin-bottom:10px;">→ <a href="/ficha-tecnica">Ficha técnica del estudio</a></li>
+                <li style="margin-bottom:10px;">→ <a href="https://paginasfast.cl" rel="noopener">PaginasFast — sitio y reservas online</a></li>
+                <li style="margin-bottom:10px;">→ <a href="https://www.automatizaweb.cl/blog/atencion-24-7-agendamiento-automatico-pyme" rel="noopener">AutomatizaWeb — agendamiento 24/7</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div class="redes-sociales">
+            <div class="contenedor-imagenes">
+                <div><a href="https://web.facebook.com/profile.php?id=100070753809805"><img src="/imagenes/footer-facebook.png" alt="facebook"></a></div>
+                <div><a href="https://www.instagram.com/estudiofuegochile/"><img src="/imagenes/footer-instagram.png" alt="instagram"></a></div>
+            </div>
+        </div>
+        <div class="informacion">
+            <p style="text-align:center;color:#888;padding:25px;font-size:.85rem;">&copy; <span id="yy"></span> Fuego Estudio · Barrio Universitario, Santiago · Sitio por <a href="https://paginasfast.cl" rel="noopener" style="color:#ff8a5b;">PaginasFast</a></p>
+        </div>
+    </footer>
+
+    <script>document.getElementById('yy').textContent = new Date().getFullYear();</script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "Cómo armamos el sistema de reservas online de Fuego Estudio (y por qué los músicos lo agradecieron)",
+          "description": "De DM en Instagram a sistema profesional de reservas online con seña, comunicación previa y ficha técnica.",
+          "url": "https://fuegoestudio.cl/blog/sistema-reservas-online-estudio-grabacion",
+          "image": "https://fuegoestudio.cl/imagenes/bannerxd-pequeno2.jpg",
+          "datePublished": "2026-05-17",
+          "dateModified": "2026-05-17",
+          "author": { "@type": "Organization", "name": "Fuego Estudio", "url": "https://fuegoestudio.cl" },
+          "publisher": { "@type": "Organization", "name": "Fuego Estudio", "url": "https://fuegoestudio.cl" },
+          "inLanguage": "es-CL"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://fuegoestudio.cl/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://fuegoestudio.cl/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Sistema de reservas online" }
+          ]
+        }
+      ]
+    }
+    </script>
+</body>
+
+</html>
