@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /funcion-mail.php
+Disallow: /phpmailer/
+Disallow: /phpmailer.php
+Disallow: /gracias
+Disallow: /gracias.html
+
+Sitemap: https://fuegoestudio.cl/sitemap.xml
